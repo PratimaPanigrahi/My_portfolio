@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="portfolio-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <span class="profile-initial">P</span>
+                <div class="profile-info">
+                    <p class="profile-name">Pratima</p>
+                    <p class="profile-role">Web Developer</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" data-section="about" class="nav-item">About</a></li>
+                    <li><a href="#" data-section="skills" class="nav-item">My Skills</a></li>
+                    <li><a href="#" data-section="work" class="nav-item">Work</a></li>
+                    <li><a href="#" data-section="contact" class="nav-item">Contact</a></li>
+                    <li><a href="#" data-section="certificate" class="nav-item">Certificate</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/pratima-panigrahi-36208b2aa/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="hero" class="content-section">
+                <div class="code-tags top-left">&lt;html/&gt;</div>
+                <div class="code-tags top-center">&lt;body/&gt;</div>
+                <h1>Hi,<br>I'm <span class="highlight">P</span>ratima,<br>web developer</h1>
+                <button class="contact-btn">Contact me!</button>
+                <div class="code-tags bottom-right">&lt;/html/&gt;</div>
+            </section>
+
+            <section id="about" class="content-section">
+                <h2>About Me</h2>
+                <p>"Hello! I'm an innovative Full-Stack Engineer in Mumbai, India, committed to building seamless and high-performing web applications. I love transforming concepts into reality, focusing on creating exceptional user experiences on the front end while engineering robust and efficient systems on the back end. My deep dive into computer science and modern development practices has provided me with a versatile skill set for end-to-end problem-solving and delivering impactful digital solutions."</p>
+
+                <div class="about-toggles">
+                    <button class="about-btn-toggle" data-toggle="projects">Projects</button>
+                    <button class="about-btn-toggle " data-toggle="experience">Experience</button>  
+                    <button class="back-to-intro-btn" data-section="hero">← Back to Intro</button>                  
+                </div>
+
+                <div id="experience" class="about-section">
+                    <h3>💼 Experience</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div id="projects" class="about-section">
+                    <h3>🚀 Projects</h3>
+                    <ul>
+                        <li><strong>Flutter Flip Card:</strong> Developed a dynamic Flutter application featuring interactive 3D flip card animations for engaging user experiences.</li>
+                        <li><strong>Android Music App:</strong> Created a native Android music player with core functionalities including playback control, playlist management, and local file Browse.</li>
+                        <li><strong>Currency Converter using API:</strong> Implemented a real-time currency conversion tool utilizing external API integration for accurate and up-to-date exchange rates.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills" class="content-section">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Python <i class="fab fa-python"></i></div>
+                    <div class="skill-item">C++ <i class="fas fa-code"></i></div>
+                    <div class="skill-item">Core Java <i class="fab fa-java"></i></div>
+                    <div class="skill-item">HTML <i class="fas fa-code"></i></div>
+                    <div class="skill-item">CSS <i class="fas fa-paint-brush"></i></div>
+                    <div class="skill-item">JavaScript <i class="fab fa-js"></i></div>
+                    <div class="skill-item">JQuery <i class="fas fa-code"></i></div>
+                    <div class="skill-item">React <i class="fab fa-react"></i></div>
+                    <div class="skill-item">Express <i class="fas fa-server"></i></div>
+                    <div class="skill-item">Node JS <i class="fab fa-node-js"></i></div>
+                    <div class="skill-item">Mongo DB <i class="fas fa-database"></i></div>
+                    <div class="skill-item">MySQL <i class="fas fa-database"></i></div>
+                    
+                    <button class="back-to-intro-btn" data-section="hero">← Back to Intro</button>
+                </div>
+            </section>
+
+            <section id="work" class="content-section">
+                <h2>My Work</h2>
+                <p>Here are some of my recent projects. Click on them to learn more!</p>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Flutter Flip Card</h3>
+                        <p>Interactive 3D flip card animation app built with Flutter.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Android Music App</h3>
+                        <p>Native Android application for local music playback and management.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Currency Converter using App</h3>
+                        <p>Real-time currency converter utilizing external API for exchange rates.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+                <button class="back-to-intro-btn" data-section="hero">← Back to Intro</button>
+            </section>
+
+            <section id="contact" class="content-section">
+                <h2>Contact Me</h2>
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <button class="back-to-intro-btn" data-section="hero">← Back to Intro</button>
+            </section>
+
+            <section id="certificate" class="content-section">
+                <h2>My Certificate</h2>
+                <button class="back-to-intro-btn" data-section="hero">← Back to Intro</button>
+
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
