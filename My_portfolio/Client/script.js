@@ -47,10 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle "Contact me!" button click on hero section
-    contactBtnHero.addEventListener('click', () => {
-        showSection('contact');
-    });
 
     // Handle About section toggles (Experience, Projects, Certifications)
     // Toggle behavior for Experience and Projects
@@ -79,15 +75,6 @@ aboutToggleButtons.forEach(button => {
     document.querySelector('.main-nav a[data-section="about"]');
 
     // Form Submission (example - add actual submission logic later)
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Message sent! (This is a demo)');
-            contactForm.reset();
-        });
-    }
-
     // Observer to update active navigation item based on scroll
     const observerOptions = {
         root: mainContent, // Observe within the scrollable main-content

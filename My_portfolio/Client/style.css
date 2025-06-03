@@ -428,68 +428,6 @@ html, body {
 }
 
 
-/* Contact Form */
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
-}
-
-#contactForm input,
-#contactForm textarea {
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 5px;
-    color: var(--text-color);
-    font-size: 1em;
-    outline: none; /* Remove default focus outline */
-}
-
-#contactForm input::placeholder,
-#contactForm textarea::placeholder {
-    color: #888;
-}
-
-#contactForm input:focus,
-#contactForm textarea:focus {
-    border-color: var(--highlight-color);
-    box-shadow: 0 0 0 2px rgba(0, 255, 192, 0.3);
-}
-
-#contactForm textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-#contactForm button[type="submit"] {
-    background-color: var(--highlight-color);
-    color: var(--dark-bg);
-    border: none;
-    padding: 15px 25px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#contactForm button[type="submit"]:hover {
-    background-color: #00E6B8; /* Slightly lighter highlight */
-    transform: translateY(-2px);
-}
-
-/* Blog Section */
-#blog {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
     .sidebar {
@@ -631,10 +569,6 @@ html, body {
 
     .projects-grid, .skills-grid {
         grid-template-columns: 1fr; /* Single column on small screens */
-    }
-
-    #contactForm {
-        max-width: 100%;
     }
 }
 .back-to-intro-btn {
