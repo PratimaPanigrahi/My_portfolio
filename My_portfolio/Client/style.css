@@ -41,8 +41,15 @@ html, body {
 /* Profile */
 .profile-section {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 40px;
+}
+
+/* Create a horizontal row for initial + name/role */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .profile-initial {
@@ -56,17 +63,31 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+  margin-left: 0px;
+  margin-right: 12px;
+  flex-shrink: 0;
 }
 
-.profile-info .profile-name {
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 0.9em;
+  white-space: nowrap; /* 💡 Prevents name from wrapping */
 }
 
-.profile-info .profile-role {
+
+.profile-role {
   font-size: 0.85em;
   color: #999;
+}
+
+.profile-contact {
+  font-size: 0.9em;
+  color: #555;
 }
 
 /* Navigation */
