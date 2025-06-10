@@ -6,9 +6,11 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body>  
   <div class="portfolio-container">
     <aside class="sidebar">
      <div class="profile-section">
@@ -35,8 +37,16 @@
       </nav>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/pratima-panigrahi-36208b2aa/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/PratimaPanigrahi" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </aside>
+    <div class="background-watermarks">
+  <div class="watermark" style="top: 10%; left: 5%; transform: rotate(-15deg);">PORTFOLIO</div>
+  <div class="watermark" style="top: 30%; left: 60%; transform: rotate(10deg);">PRATIMA</div>
+  <div class="watermark" style="top: 50%; left: 20%; transform: rotate(-25deg);">DESIGNER</div>
+  <div class="watermark" style="top: 70%; left: 75%; transform: rotate(20deg);">DEVELOPER</div>
+  <div class="watermark" style="top: 85%; left: 35%; transform: rotate(-5deg);">CREATOR</div>
+</div>
 
     <main class="main-content">
       <section id="hero" class="content-section">
@@ -44,14 +54,11 @@
         <div class="code-tags top-center"></div>
         <h1>Hi,<br>I'm <span class="highlight">P</span>ratima,<br>web developer</h1>
         <button class="contact-btn" onclick="openGmail()">Contact me!</button>
-
-
-        <div class="code-tags bottom-right"></div>
       </section>
 
       <section id="about" class="content-section">
         <h2>About Me</h2>
-        <p>"Hello! I'm an innovative Full-Stack Engineer in Mumbai, India, building seamless and high-performing web apps. I transform ideas into reality with front-end finesse and back-end strength."</p>
+        <p>"Hello! I'm an innovative Full-Stack Engineer in Mumbai, India, building seamless and  high-performing web apps. I transform ideas into reality with front-end finesse and back-end strength."</p>
         <div class="about-toggles">
           <button class="about-btn-toggle" data-toggle="projects">Projects</button>
           <button class="about-btn-toggle" data-toggle="experience">Experience</button>
@@ -61,11 +68,10 @@
           <ul><li>Details Coming Soon</li></ul>
         </div>
         <div id="projects" class="about-section">
-          <h3>🚀 Projects</h3>
           <ul>
-            <li><strong>Flutter Flip Card:</strong> 3D card animation in Flutter.</li>
-            <li><strong>Android Music App:</strong> Native player with playlists.</li>
-            <li><strong>Currency Converter:</strong> Real-time rates using API.</li>
+            <li><strong>Flutter Flip  :</strong> 3D card animation in Flutter.</li>
+            <li><strong>Android Music App :</strong> Native player with playlists.</li>
+            <li><strong>Currency Converter :</strong> Real-time rates using API.</li>
           </ul>
         </div>
       </section>
@@ -105,7 +111,7 @@
           <div class="project-card">
             <h3>Currency Converter App</h3>
             <p>Real-time converter using API.</p>
-            <a href="#">View Project</a>
+            <a href="https://github.com/PratimaPanigrahi/API_Currencyconvertor.git" target="_blank" rel="noopener noreferrer">View Project</a>
           </div>
         </div>
       </section>
@@ -116,6 +122,7 @@
       </section>
     </main>
   </div>
+  
   <script src="script.js"></script>
 </body>
 </html>

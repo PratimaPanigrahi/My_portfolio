@@ -17,12 +17,38 @@ html, body {
   color: var(--text-color);
   background-color: var(--dark-bg);
   overflow: hidden;
+   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.background-watermarks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
+/* Style for each watermark text */
+.watermark {
+  position: absolute;
+  font-size: 6vw; /* responsive large text */
+  color: red;
+opacity: 5;
+  font-weight: 700;
+  user-select: none;
+  white-space: nowrap;
+  opacity: 0.08;
+  font-family: 'Arial', sans-serif;
+}
 .portfolio-container {
   display: flex;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; 
+  z-index: 3; 
+  position: relative; 
 }
 
 .sidebar {
@@ -33,11 +59,11 @@ html, body {
   justify-content: space-between;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 .profile-section {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif; /* Enhanced font */
 }
 
 .profile-header {
@@ -47,10 +73,10 @@ html, body {
 }
 
 .profile-initial {
-  background-color: var(--highlight-color);
+  background: linear-gradient(135deg, var(--highlight-color), #00cfa0);
   color: var(--dark-bg);
-  font-weight: 900;
-  font-size: 2.5em;
+  font-weight: 800;
+  font-size: 2.7em;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -59,6 +85,14 @@ html, body {
   align-items: center;
   margin-right: 12px;
   flex-shrink: 0;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 255, 192, 0.3); /* soft glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-initial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 255, 192, 0.45);
 }
 
 .profile-info {
@@ -67,48 +101,98 @@ html, body {
 }
 
 .profile-name {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.9em;
   white-space: nowrap;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .profile-role {
-  font-size: 0.85em;
+  font-size: 0.9em;
   color: #999;
+  font-weight: 500;
+  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .profile-contact {
   font-size: 0.9em;
   color: #f3f3f3;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-family: 'Open Sans', sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: default;
 }
-
 .main-nav ul {
   list-style: none;
-  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
 }
 
-.main-nav li {
-  margin-bottom: 15px;
-}
-
-.main-nav a {
+.main-nav .nav-item {
+  font-family: 'Poppins', sans-serif; /* Sleek modern font */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+  font-size: 1.1em;
+  padding: 12px 20px;
   color: var(--text-color);
   text-decoration: none;
-  font-size: 1.1em;
-  padding: 8px 15px;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
+.main-nav .nav-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--highlight-color);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: -1;
+}
+
+.main-nav .nav-item:hover::before,
+.main-nav .nav-item.active::before {
+  transform: scaleY(1);
+}
+
+.main-nav .nav-item:hover {
   background-color: rgba(255, 255, 255, 0.08);
   color: var(--highlight-color);
+  transform: translateX(6px);
+  box-shadow: 0 0 8px rgba(0, 255, 192, 0.15);
 }
+
+.main-nav .nav-item.active {
+  color: var(--highlight-color);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: translateX(6px);
+}
+
 
 .social-links {
   margin-top: 40px;
+  margin-bottom: 10px;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -237,6 +321,7 @@ html, body {
 
 .about-section {
   display: none;
+   margin-top: 25px;
   flex-direction: column;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.05);
@@ -265,9 +350,12 @@ html, body {
 
 .about-section li {
   margin-bottom: 10px;
-  line-height: 1.5;
+  line-height:1.1;
   position: relative;
   padding-left: 20px;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; 
+   line-height: 1.6;
 }
 
 .about-section li::before {
