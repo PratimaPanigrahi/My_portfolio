@@ -1,4 +1,4 @@
-// Make this function GLOBAL
+// Global Gmail opener
 function openGmail() {
   const email = "pratgrahi.10@gmail.com";
   const subject = "Let's Connect!";
@@ -7,6 +7,7 @@ function openGmail() {
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.open(gmailUrl, '_blank');
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-item');
   const contentSections = document.querySelectorAll('.content-section');
@@ -20,10 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showSection(id) {
-    // Reset About internal subsections if leaving About
-    if (id !== 'about') {
-      resetAboutSubsections();
-    }
+    if (id !== 'about') resetAboutSubsections();
 
     contentSections.forEach(s => s.classList.remove('active-section'));
     const target = document.getElementById(id);
@@ -35,9 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    navItems.forEach(item => {
-      item.classList.toggle('active', item.dataset.section === id);
-    });
+    navItems.forEach(item => item.classList.toggle('active', item.dataset.section === id));
   }
 
   navItems.forEach(item => {
@@ -53,11 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetSection = document.getElementById(targetId);
       const isVisible = targetSection.classList.contains('active-toggle');
 
-      // Close all sections and buttons first
-      aboutSections.forEach(s => s.classList.remove('active-toggle'));
-      aboutToggleButtons.forEach(b => b.classList.remove('active'));
-
-      // Toggle current if it was not already open
+      resetAboutSubsections();
       if (!isVisible) {
         targetSection.classList.add('active-toggle');
         btn.classList.add('active');
@@ -85,6 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Initial state
   showSection('hero');
 });
