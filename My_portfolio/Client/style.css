@@ -18,13 +18,8 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
   background-color: var(--dark-bg);
-  scroll-behavior: smooth;
+    overflow: hidden;
 }
-
-.section, .certificate-grid, .container {
-  overflow: visible;
-}
-
 .portfolio-container {
   display: flex;
   flex-direction: row;
@@ -508,8 +503,7 @@ html, body {
   box-shadow: 0 6px 14px rgba(217, 79, 140, 0.35); /* Slight glow on hover */
 }
 
-.skills-grid,
-.certificate-grid {
+.skills-grid {
   display: grid;
   flex-wrap: wrap;
   gap: 20px;
@@ -520,6 +514,16 @@ html, body {
   margin-top: 30px;  
   padding: 20px;
 }
+.certificate-grid {
+ display: flex;
+  justify-content: space-between; /* or space-around / center */
+  gap: 20px; /* optional spacing between cards */
+  padding: 20px;
+  flex-wrap: nowrap; /* prevent wrapping to next line */
+width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
 
 .certificate-card:nth-child(1),
 .certificate-card:nth-child(2),
@@ -573,3 +577,13 @@ html, body {
   display: flex;
   gap: 20px;
 }
+/* Hide scrollbar for all browsers */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
+

@@ -70,6 +70,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   contentSections.forEach(section => observer.observe(section));
+  window.addEventListener('scroll', function (e) {
+    window.scrollTo(0, 0);
+  });
+
+  // Prevent touch scroll
+  window.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  }, { passive: false });
+
+  // Prevent mouse wheel
+  window.addEventListener('wheel', function (e) {
+    e.preventDefault();
+  }, { passive: false });
+
+  // Prevent keyboard scrolling
+  window.addEventListener('keydown', function (e) {
+    const keys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '];
+    if (keys.includes(e.key)) {
+      e.preventDefault();
+    }
+  });
 
   document.querySelectorAll('.back-to-intro-btn').forEach(btn => {
     btn.addEventListener('click', () => {
