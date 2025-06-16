@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+ <a href="your-cv.pdf" download><button class="download-cv-btn"> Download CV <i class="fas fa-download"></i></button></a>
+
+  <div class="portfolio-container">
+    <!-- Hamburger Button -->
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <aside class="sidebar">
+      <div class="profile-section">
+        <div class="profile-header">
+          <div class="profile-initial">P</div>
+          <div class="profile-info">
+            <div class="profile-name">Pratima Panigrahi</div>
+            <div class="profile-role">Web Developer</div>
+          </div>
+        </div>
+        <div class="profile-contact">
+          <div class="email">📧 pratgrahi.10@gmail.com</div>
+          <div class="location">📍 Mumbai, India</div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" data-section="hero" class="nav-item">Intro</a></li>
+          <li><a href="#" data-section="about" class="nav-item">About</a></li>
+          <li><a href="#" data-section="skills" class="nav-item">My Skills</a></li>
+          <li><a href="#" data-section="work" class="nav-item">Work</a></li>
+          <li><a href="#" data-section="certificate" class="nav-item">Certificate</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <div class="follow-label">Follow me :</div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/pratima-panigrahi-36208b2aa/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/PratimaPanigrahi" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>          
+    </aside>
+
+    <main class="main-content">
+      <section id="hero" class="content-section">
+        <div class="code-tags top-left"></div>
+        <div class="code-tags top-center"></div>
+        <h1>Hi, <br> I'm <span class="highlight-p">P</span>ratima, <br> web developer</h1>
+
+        <button class="contact-btn" onclick="openGmail()">Contact me!</button>
+      </section>
+
+      <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <p>"Hello! I'm an innovative Full-Stack Engineer in Mumbai, India, building seamless and high-performing web
+          apps. I transform ideas into reality with front-end finesse and back-end strength."</p>
+        <div class="about-toggles">
+          <button class="about-btn-toggle" data-toggle="projects">Projects</button>
+          <button class="about-btn-toggle" data-toggle="experience">Experience</button>
+        </div>
+        <div id="experience" class="about-section">
+          <h3>💼 Experience</h3>
+          <ul>
+            <li>Details Coming Soon</li>
+          </ul>
+        </div>
+        <div id="projects" class="about-section">
+          <ul>
+            <li><strong>Flutter Flip :</strong> 3D card animation in Flutter.</li>
+            <li><strong>Android Music App :</strong> Native player with playlists.</li>
+            <li><strong>Currency Converter :</strong> Real-time rates using API.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="content-section">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">Python <i class="fab fa-python"></i></div>
+          <div class="skill-item">C++ <i class="fas fa-code"></i></div>
+          <div class="skill-item">Java <i class="fab fa-java"></i></div>
+          <div class="skill-item">HTML <i class="fas fa-code"></i></div>
+          <div class="skill-item">CSS <i class="fas fa-paint-brush"></i></div>
+          <div class="skill-item">JavaScript <i class="fab fa-js"></i></div>
+          <div class="skill-item">jQuery <i class="fas fa-code"></i></div>
+          <div class="skill-item">React <i class="fab fa-react"></i></div>
+          <div class="skill-item">Express <i class="fas fa-server"></i></div>
+          <div class="skill-item">Node.js <i class="fab fa-node-js"></i></div>
+          <div class="skill-item">MongoDB <i class="fas fa-database"></i></div>
+          <div class="skill-item">MySQL <i class="fas fa-database"></i></div>
+        </div>
+      </section>
+      
+      <section id="work" class="content-section">
+        <h2>My Work</h2>
+        <p>Here are some of my recent projects:</p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Flutter Flip Card</h3>
+            <p>3D card animation app with Flutter.</p>
+            <a href="https://github.com/PratimaPanigrahi/Flipcard_flutter" target="_blank"
+              rel="noopener noreferrer">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Android Music App</h3>
+            <p>Native Android music player.</p>
+            <a href="https://github.com/PratimaPanigrahi/Androidstudio_Musicplayer.git" target="_blank"
+              rel="noopener noreferrer">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Currency Converter App</h3>
+            <p>Real-time converter using API.</p>
+            <a href="https://github.com/PratimaPanigrahi/API_Currencyconvertor.git" target="_blank"
+              rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </section>
+      <section id="certificate" class="content-section">
+        <h2>My Certificate</h2>
+        <div class="certificate-grid">
+          <div class="certificate-card">
+            <h3 class="cert-title">Certified Full Stack Developer</h3>
+            <div class="cert-sub-info">
+              <span class="cert-org">Infobyte Career Institute</span>
+              <span class="cert-date">SEP 2024</span>
+            </div>
+            <p class="cert-skills"><strong>Skills :</strong> Frontend & Backend </p>
+            <a href="#" target="_blank" class="credential-btn">
+              Credentials <span class="arrow">→</span>
+            </a>
+          </div>
+
+            <div class="certificate-card">
+            <h3 class="cert-title">Certified in Python Programming</h3>
+            <div class="cert-sub-info">
+              <span class="cert-org">Infobyte Career Institute</span>
+              <span class="cert-date">SEP 2024</span>
+            </div>
+            <p class="cert-skills"><strong>Skills :</strong> PYTHON </p>
+            <a href="https://drive.google.com/file/d/1ZAdESlcqw0ePbX3Z-hE3iRosuDpLen2y/view?usp=drive_link" target="_blank" class="credential-btn">
+              Credentials <span class="arrow">→</span>
+            </a>
+          </div>
+
+            <div class="certificate-card">
+            <h3 class="cert-title">Certified in Java Programming </h3>
+            <div class="cert-sub-info">
+              <span class="cert-org">Infobyte Career Institute</span>
+              <span class="cert-date">SEP 2024</span>
+            </div>
+            <p class="cert-skills"><strong>Skills :</strong> JAVA </p>
+            <a href="#" target="_blank" class="credential-btn">
+              Credentials <span class="arrow">→</span>
+            </a>
+          </div>
+
+  <div class="certificate-card">
+            <h3 class="cert-title">Certified in C++ Programming</h3>
+            <div class="cert-sub-info">
+              <span class="cert-org">Infobyte Career Institute</span>
+              <span class="cert-date">SEP 2024</span>
+            </div>
+            <p class="cert-skills"><strong>Skills :</strong> C++ </p>
+            <a href="https://drive.google.com/file/d/1ZWVeG8FJ9TODrqHZ2tKEVw-kZIZokncW/view?usp=drive_link" target="_blank" class="credential-btn">
+              Credentials <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
